@@ -82,13 +82,11 @@ class Bird(object):
         self.pos = (self.pos[0], self.pos[1] + self.gravity)
         self.rect.x = self.pos[0] 
         self.rect.y = self.pos[1]
-        #ceiling 
         if self.pos[1] < 5 : gravity = 0.2
 
     def draw(self,win): 
         x = self.pos[0]
         y = self.pos[1]
-        #pygame.draw.rect(win, self.color, (x,y, 70,43))
         win.blit(pygame.transform.rotate(self.image,-self.gravity*2),(self.pos[0],self.pos[1]))
     def colidded(self,obg):
         return self.rect.colliderect(obg.rect)
@@ -112,7 +110,6 @@ class Background(object):
 def redrawWindow(win,last_score):
     global b, width
     win.fill(ground_color)      
-    #win.blit(text, textRect) 
     b.draw(win)
     p1.draw(win,False)
     p1_up.draw(win,True)
