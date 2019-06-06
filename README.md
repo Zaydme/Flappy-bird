@@ -7,7 +7,7 @@
 
 2-```python flappy.py```
 
-[preview](./preview.jpg)
+![preview](./preview.jpg)
 
 
 # EDUCATIONAL PURPOSES ONLY
